@@ -12,11 +12,6 @@ import MapKit
 struct DetailView: View {
     @State var  contact: Contact
     @State var  region: MKCoordinateRegion
-
-    
-   
-
-    
     var body: some View {
         Form {
                 
@@ -43,9 +38,6 @@ struct DetailView: View {
                 
          
             }
-           
-            
-            
         }
     }
 }

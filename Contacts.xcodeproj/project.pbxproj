@@ -18,6 +18,8 @@
 		226BACB427898320005ECC34 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226BACB327898320005ECC34 /* AddView.swift */; };
 		226BACB627898962005ECC34 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226BACB527898962005ECC34 /* DetailView.swift */; };
 		2298A804278A00EB0022997A /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2298A803278A00EB0022997A /* LocationFetcher.swift */; };
+		22A463D9278AFF7100A91B1A /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A463D8278AFF7100A91B1A /* ContentView-ViewModel.swift */; };
+		22A463DB278B020A00A91B1A /* AddView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A463DA278B020A00A91B1A /* AddView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		226BACB327898320005ECC34 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		226BACB527898962005ECC34 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		2298A803278A00EB0022997A /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		22A463D8278AFF7100A91B1A /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		22A463DA278B020A00A91B1A /* AddView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			children = (
 				222C492D2783739300B2FB4F /* ContactsApp.swift */,
 				222C492F2783739300B2FB4F /* ContentView.swift */,
+				22A463D8278AFF7100A91B1A /* ContentView-ViewModel.swift */,
 				226BACB527898962005ECC34 /* DetailView.swift */,
 				226BACAF2789671C005ECC34 /* ImagePicker.swift */,
 				226BACB127896741005ECC34 /* ImageSaver.swift */,
@@ -75,6 +80,7 @@
 				226BACAB27896471005ECC34 /* Contact.swift */,
 				226BACAD2789668C005ECC34 /* FileManagerExtension.swift */,
 				226BACB327898320005ECC34 /* AddView.swift */,
+				22A463DA278B020A00A91B1A /* AddView-ViewModel.swift */,
 				2298A803278A00EB0022997A /* LocationFetcher.swift */,
 			);
 			path = Contacts;
@@ -160,11 +166,13 @@
 			files = (
 				226BACB427898320005ECC34 /* AddView.swift in Sources */,
 				226BACB627898962005ECC34 /* DetailView.swift in Sources */,
+				22A463DB278B020A00A91B1A /* AddView-ViewModel.swift in Sources */,
 				226BACAC27896471005ECC34 /* Contact.swift in Sources */,
 				226BACB227896741005ECC34 /* ImageSaver.swift in Sources */,
 				226BACAE2789668C005ECC34 /* FileManagerExtension.swift in Sources */,
 				226BACB02789671C005ECC34 /* ImagePicker.swift in Sources */,
 				222C49302783739300B2FB4F /* ContentView.swift in Sources */,
+				22A463D9278AFF7100A91B1A /* ContentView-ViewModel.swift in Sources */,
 				222C492E2783739300B2FB4F /* ContactsApp.swift in Sources */,
 				2298A804278A00EB0022997A /* LocationFetcher.swift in Sources */,
 			);

@@ -8,39 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var showImagePicker = false;
-    @State private var inputImage: UIImage?
-    @State private var outPutImage =  UIImage(systemName: "person.circle")
-    @State  var newIded = UUID()
-    @State private var contacts = [Contact]()
-    
-    let savePath = FileManager.doucmentsDir.appendingPathComponent("contacts")
-    
-    func save(){
-        do {
-            let data = try JSONEncoder().encode(contacts)
-            try data.write(to: savePath,options: [.atomic,.completeFileProtection])
-        } catch {
-            print("Unable to save data")
-        }
-    }
-    
-    func loadData() {
-        do{
-            let data = try Data(contentsOf: savePath)
-            let contacts = try JSONDecoder().decode([Contact].self, from: data)
-            self.contacts = contacts
-        } catch {
-            print("Unable to load data")
-           
-        }
-    }
-    
-    
-    
+    @StateObject private var viewModel = ViewModel()
     var body: some View {
         NavigationView {
-            List(contacts) { contact in
+            List(viewModel.contacts) { contact in
                 NavigationLink(destination : DetailView(contact: contact, region: contact.region ) ){
                     VStack {
                         HStack {
@@ -55,17 +26,12 @@ struct ContentView: View {
                
             }.navigationTitle("Contacts")
                 .navigationBarItems(trailing: Button("Add"){
-                    showImagePicker = true
+                    viewModel.showImagePicker = true
                 })
         }
-        .onAppear {
-            loadData()
-        }
-        .sheet(isPresented: $showImagePicker){
+        .sheet(isPresented: $viewModel.showImagePicker){
             AddView(){ contact in
-                print(contact)
-                contacts.append(contact)
-                save()
+                viewModel.addNewContact(contact: contact)
             }
         }
 }
